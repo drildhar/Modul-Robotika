@@ -1,0 +1,205 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 460" role="img" aria-labelledby="judul uraian">
+  <title id="judul">Bentuk robot pengikut garis, tampak atas dan tampak samping</title>
+  <desc id="uraian">Rakitan dari panduan LEGORobotics Mr. Hino. Tampak atas: hub rebah di tengah dengan layar menghadap ke atas, dua motor menempel di sisi kiri dan kanan hub, roda penggerak di ujung depan dengan jarak 110 sampai 130 mm, Color Sensor di garis tengah robot di antara kedua roda, sedikit di depan poros dan tepat di atas tepi garis hitam, satu roda kecil di belakang. Tampak samping: sensor menghadap lantai dengan celah 5 sampai 10 mm, roda kecil belakang satu titik.</desc>
+  <style>
+    .bg{fill:#f7f5f0}
+    .ink{stroke:#1f2530}
+    .txt{fill:#1f2530;font:500 13px system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+    .strong{font-weight:650}
+    .muted{fill:#626a77}
+    .cap{fill:#626a77;font:650 11px system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;letter-spacing:.14em}
+    .rule{stroke:#d9d5cc;stroke-width:1}
+    .center{stroke:#8a919c;stroke-width:1;stroke-dasharray:6 4;fill:none}
+    .beam{fill:#d4d0c7;stroke:#1f2530;stroke-width:1.25}
+    .motor{fill:#fbfbfa;stroke:#1f2530;stroke-width:1.25}
+    .motorbody{fill:#c9cdd2;stroke:#1f2530;stroke-width:1.25}
+    .hub{fill:#1e7b83;stroke:#12494e;stroke-width:1.25}
+    .hubtop{fill:#fbfbfa;stroke:#12494e;stroke-width:1.25}
+    .hubdot{fill:#9aa0a8}
+    .hubtxt{fill:#e8f7f8;font:650 13px system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;letter-spacing:.06em}
+    .tire{fill:#2a2e35;stroke:#1f2530;stroke-width:1.25}
+    .tread{stroke:#474d57;stroke-width:1.5}
+    .rim{fill:#cfd3d8;stroke:#1f2530;stroke-width:1.25}
+    .sensor{fill:#1b1e24;stroke:#1f2530;stroke-width:1.25}
+    .hidden{fill:none;stroke:#1f2530;stroke-width:1.25;stroke-dasharray:4 3}
+    .lens{fill:#f4f4f2;stroke:#c2410c;stroke-width:2}
+    .glow{fill:#f97316;opacity:.28}
+    .tape{fill:#16181c}
+    .floor{stroke:#1f2530;stroke-width:1.5}
+    .hatch{stroke:#b9b4a9;stroke-width:1}
+    .dim{stroke:#c2410c;stroke-width:1.25;fill:none}
+    .ext{stroke:#c2410c;stroke-width:.75;opacity:.7}
+    .dimfill{fill:#c2410c}
+    .dimtxt{fill:#c2410c;font:650 13px system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+    .mono{font-family:ui-monospace,"Cascadia Code",Consolas,monospace;font-weight:600}
+    .lead{stroke:#626a77;stroke-width:1;fill:none}
+    .plate{fill:#f7f5f0}
+    .fwd{stroke:#1f2530;stroke-width:1.5;fill:none}
+    .fwdfill{fill:#1f2530}
+    @media (prefers-color-scheme: dark){
+      .bg,.plate{fill:#161a20}
+      .ink,.floor,.fwd,.hidden{stroke:#d7dbe2}
+      .fwdfill{fill:#d7dbe2}
+      .txt{fill:#e3e6eb}
+      .muted,.cap{fill:#98a0ad}
+      .rule{stroke:#2a303a}
+      .center{stroke:#6b7380}
+      .beam{fill:#3a404b;stroke:#aab1bc}
+      .motor{fill:#d3d7dd;stroke:#aab1bc}
+      .motorbody{fill:#8e949c;stroke:#aab1bc}
+      .hub{fill:#2a9aa3;stroke:#7fd0d6}
+      .hubtop{fill:#d3d7dd;stroke:#7fd0d6}
+      .hubdot{fill:#5b616b}
+      .tire{fill:#0c0e11;stroke:#aab1bc}
+      .tread{stroke:#2f343c}
+      .rim{fill:#9aa1ab;stroke:#d7dbe2}
+      .sensor{fill:#0c0e11;stroke:#aab1bc}
+      .tape{fill:#050607}
+      .hatch{stroke:#3a404b}
+      .dim,.ext{stroke:#fb8a4c}
+      .dimfill{fill:#fb8a4c}
+      .dimtxt{fill:#fb8a4c}
+      .lead{stroke:#98a0ad}
+      .lens{stroke:#fb8a4c}
+    }
+  </style>
+  <defs>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,1 L10,5 L0,9 z" class="dimfill"/>
+    </marker>
+    <marker id="maju" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" class="fwdfill"/>
+    </marker>
+  </defs>
+
+  <!-- skala kedua tampak: 1.5 px per mm -->
+  <rect class="bg" width="960" height="460" rx="14"/>
+  <line class="rule" x1="480" y1="36" x2="480" y2="424"/>
+
+  <!-- ============ TAMPAK ATAS ============ -->
+  <text class="cap" x="40" y="48">TAMPAK ATAS</text>
+
+  <!-- garis hitam lintasan, 20 mm, sensor di atas tepi kirinya -->
+  <rect class="tape" x="240" y="72" width="30" height="296"/>
+  <text class="txt muted" x="278" y="86">garis hitam</text>
+
+  <!-- arah maju -->
+  <line class="fwd" x1="56" y1="250" x2="56" y2="150" marker-end="url(#maju)"/>
+  <text class="txt muted" x="56" y="272" text-anchor="middle">maju</text>
+
+  <!-- garis tengah robot -->
+  <line class="center" x1="240" y1="112" x2="240" y2="360"/>
+
+  <!-- motor, menempel di sisi kiri dan kanan hub, ujung porosnya di depan -->
+  <rect class="motorbody" x="162" y="214" width="36" height="96" rx="4"/>
+  <rect class="motor" x="162" y="188" width="36" height="30" rx="4"/>
+  <rect class="motorbody" x="282" y="214" width="36" height="96" rx="4"/>
+  <rect class="motor" x="282" y="188" width="36" height="30" rx="4"/>
+  <text class="txt muted" x="342" y="292">motor</text>
+  <path class="lead" d="M318,288 L338,288"/>
+
+  <!-- hub rebah, layar menghadap ke atas -->
+  <rect class="hubtop" x="198" y="190" width="84" height="132" rx="8"/>
+  <g class="hubdot">
+    <circle cx="222" cy="224" r="2.6"/><circle cx="231" cy="224" r="2.6"/><circle cx="240" cy="224" r="2.6"/><circle cx="249" cy="224" r="2.6"/><circle cx="258" cy="224" r="2.6"/>
+    <circle cx="222" cy="233" r="2.6"/><circle cx="231" cy="233" r="2.6"/><circle cx="240" cy="233" r="2.6"/><circle cx="249" cy="233" r="2.6"/><circle cx="258" cy="233" r="2.6"/>
+    <circle cx="222" cy="242" r="2.6"/><circle cx="231" cy="242" r="2.6"/><circle cx="240" cy="242" r="2.6"/><circle cx="249" cy="242" r="2.6"/><circle cx="258" cy="242" r="2.6"/>
+    <circle cx="222" cy="251" r="2.6"/><circle cx="231" cy="251" r="2.6"/><circle cx="240" cy="251" r="2.6"/><circle cx="249" cy="251" r="2.6"/><circle cx="258" cy="251" r="2.6"/>
+    <circle cx="222" cy="260" r="2.6"/><circle cx="231" cy="260" r="2.6"/><circle cx="240" cy="260" r="2.6"/><circle cx="249" cy="260" r="2.6"/><circle cx="258" cy="260" r="2.6"/>
+    <circle cx="240" cy="290" r="7"/>
+  </g>
+  <text class="txt muted" x="342" y="330">hub, rebah</text>
+  <path class="lead" d="M282,326 L338,326"/>
+
+  <!-- roda penggerak di ujung depan -->
+  <rect class="tire" x="141" y="161" width="21" height="84" rx="7"/>
+  <rect class="tire" x="318" y="161" width="21" height="84" rx="7"/>
+  <g class="tread">
+    <line x1="144" y1="172" x2="159" y2="172"/><line x1="144" y1="184" x2="159" y2="184"/><line x1="144" y1="196" x2="159" y2="196"/>
+    <line x1="144" y1="210" x2="159" y2="210"/><line x1="144" y1="222" x2="159" y2="222"/><line x1="144" y1="234" x2="159" y2="234"/>
+    <line x1="321" y1="172" x2="336" y2="172"/><line x1="321" y1="184" x2="336" y2="184"/><line x1="321" y1="196" x2="336" y2="196"/>
+    <line x1="321" y1="210" x2="336" y2="210"/><line x1="321" y1="222" x2="336" y2="222"/><line x1="321" y1="234" x2="336" y2="234"/>
+  </g>
+  <text class="txt muted" x="151" y="152" text-anchor="middle">roda</text>
+
+  <!-- poros roda -->
+  <line class="center" x1="112" y1="203" x2="436" y2="203"/>
+  <text class="txt muted" x="360" y="196">poros roda</text>
+
+  <!-- Color Sensor di antara kedua motor, sedikit di depan poros -->
+  <rect class="sensor" x="226" y="160" width="28" height="30" rx="5"/>
+  <circle class="lens" cx="240" cy="175" r="7"/>
+  <path class="lead" d="M254,164 L292,128 L300,128"/>
+  <text class="txt strong" x="304" y="124">Color Sensor</text>
+  <text class="txt muted" x="304" y="141">di antara kedua roda,</text>
+  <text class="txt muted" x="304" y="157">tepat di atas tepi garis</text>
+
+  <!-- roda kecil belakang, satu titik di garis tengah -->
+  <rect class="tire" x="235" y="324" width="10" height="30" rx="3"/>
+  <path class="lead" d="M234,346 L214,362"/>
+  <text class="txt muted" x="210" y="370" text-anchor="end">roda kecil belakang</text>
+
+  <!-- ukuran: axle_track, antar titik sentuh roda -->
+  <line class="ext" x1="151" y1="248" x2="151" y2="400"/>
+  <line class="ext" x1="329" y1="248" x2="329" y2="400"/>
+  <line class="dim" x1="153" y1="392" x2="327" y2="392" marker-start="url(#panah)" marker-end="url(#panah)"/>
+  <rect class="plate" x="166" y="398" width="148" height="20" rx="3"/>
+  <text class="dimtxt" x="240" y="413" text-anchor="middle"><tspan class="mono">axle_track</tspan> 110–130 mm</text>
+
+  <!-- ============ TAMPAK SAMPING ============ -->
+  <text class="cap" x="520" y="48">TAMPAK SAMPING</text>
+
+  <!-- arah maju -->
+  <line class="fwd" x1="826" y1="86" x2="916" y2="86" marker-end="url(#maju)"/>
+  <text class="txt muted" x="826" y="76">maju</text>
+
+  <!-- lantai -->
+  <line class="floor" x1="508" y1="372" x2="932" y2="372"/>
+  <g class="hatch">
+    <line x1="516" y1="382" x2="526" y2="372"/><line x1="532" y1="382" x2="542" y2="372"/><line x1="548" y1="382" x2="558" y2="372"/><line x1="564" y1="382" x2="574" y2="372"/>
+    <line x1="580" y1="382" x2="590" y2="372"/><line x1="596" y1="382" x2="606" y2="372"/><line x1="612" y1="382" x2="622" y2="372"/><line x1="628" y1="382" x2="638" y2="372"/>
+    <line x1="644" y1="382" x2="654" y2="372"/><line x1="660" y1="382" x2="670" y2="372"/><line x1="676" y1="382" x2="686" y2="372"/><line x1="692" y1="382" x2="702" y2="372"/>
+    <line x1="708" y1="382" x2="718" y2="372"/><line x1="724" y1="382" x2="734" y2="372"/><line x1="740" y1="382" x2="750" y2="372"/><line x1="756" y1="382" x2="766" y2="372"/>
+    <line x1="772" y1="382" x2="782" y2="372"/>
+  </g>
+
+  <!-- hub rebah di atas motor -->
+  <rect class="hub" x="628" y="266" width="132" height="48" rx="8"/>
+  <rect class="hubtop" x="628" y="262" width="132" height="10" rx="4"/>
+  <text class="hubtxt" x="686" y="297" text-anchor="middle">hub</text>
+
+  <!-- motor di sisi hub, porosnya segaris dengan poros roda -->
+  <rect class="motorbody" x="642" y="312" width="96" height="36" rx="4"/>
+  <rect class="motor" x="724" y="312" width="30" height="36" rx="4"/>
+
+  <!-- roda kecil belakang -->
+  <rect class="beam" x="632" y="312" width="12" height="36"/>
+  <circle class="tire" cx="638" cy="354" r="18"/>
+  <circle class="rim" cx="638" cy="354" r="8"/>
+  <text class="txt muted" x="620" y="404" text-anchor="middle">roda kecil belakang</text>
+
+  <!-- roda penggerak -->
+  <circle class="tire" cx="739" cy="330" r="42"/>
+  <circle class="rim" cx="739" cy="330" r="24"/>
+  <g class="tire">
+    <circle cx="739" cy="315" r="3.5"/><circle cx="752" cy="322.5" r="3.5"/><circle cx="752" cy="337.5" r="3.5"/>
+    <circle cx="739" cy="345" r="3.5"/><circle cx="726" cy="337.5" r="3.5"/><circle cx="726" cy="322.5" r="3.5"/>
+  </g>
+  <circle class="rim" cx="739" cy="330" r="5"/>
+  <text class="txt muted" x="739" y="404" text-anchor="middle">roda</text>
+
+  <!-- sensor menghadap lantai, di balik roda, sedikit di depan poros -->
+  <path class="glow" d="M756,362 L780,362 L790,372 L746,372 z"/>
+  <rect class="hidden" x="754" y="330" width="28" height="32" rx="4"/>
+  <text class="txt strong" x="800" y="306">Color Sensor</text>
+  <text class="txt muted" x="800" y="322">di balik roda</text>
+  <path class="lead" d="M782,334 L798,318"/>
+
+  <!-- ukuran: celah sensor ke lantai -->
+  <line class="ext" x1="784" y1="362" x2="836" y2="362"/>
+  <line class="ext" x1="792" y1="372" x2="836" y2="372"/>
+  <line class="dim" x1="828" y1="334" x2="828" y2="360" marker-end="url(#panah)"/>
+  <line class="dim" x1="828" y1="400" x2="828" y2="374" marker-end="url(#panah)"/>
+  <text class="dimtxt" x="842" y="348">5–10 mm</text>
+  <text class="txt muted" x="842" y="364">dari lantai</text>
+</svg>
