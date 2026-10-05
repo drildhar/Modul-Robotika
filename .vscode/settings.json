@@ -1,9 +1,0 @@
-{
-  // Nama hub yang kalian beri saat memasang firmware Pybricks.
-  // Dipakai oleh tugas di tasks.json lewat ${config:pybricks.hubName}.
-  // Ganti satu tempat ini saja.
-  "pybricks.hubName": "Marin Kitagawa",
-
-  // Supaya VS Code memakai environment proyek, bukan Python sistem.
-  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python"
-}
