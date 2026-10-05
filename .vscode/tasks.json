@@ -1,0 +1,54 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Pybricks: kirim berkas yang terbuka",
+      "detail": "Menyimpan lalu mengirim berkas yang sedang dibuka di editor ke hub.",
+      "type": "process",
+      "command": "${command:python.interpreterPath}",
+      "args": [
+        "-m",
+        "pybricksdev",
+        "run",
+        "ble",
+        "--name",
+        "${config:pybricks.hubName}",
+        "${file}"
+      ],
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "Pybricks: kirim main.py",
+      "detail": "Program tantangan.",
+      "type": "process",
+      "command": "${command:python.interpreterPath}",
+      "args": [
+        "-m",
+        "pybricksdev",
+        "run",
+        "ble",
+        "--name",
+        "${config:pybricks.hubName}",
+        "${workspaceFolder}/robot/main.py"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Pybricks: kirim calibrate.py",
+      "detail": "Alat ukur. Pakai sebelum menyetel apa pun.",
+      "type": "process",
+      "command": "${command:python.interpreterPath}",
+      "args": [
+        "-m",
+        "pybricksdev",
+        "run",
+        "ble",
+        "--name",
+        "${config:pybricks.hubName}",
+        "${workspaceFolder}/robot/calibrate.py"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}

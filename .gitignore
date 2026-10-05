@@ -1,0 +1,8 @@
+# Lingkungan Python, dipasang lewat uv
+.venv/
+.pixi/
+__pycache__/
+*.pyc
+
+# Editor
+.DS_Store
